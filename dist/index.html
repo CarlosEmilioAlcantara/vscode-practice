@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body>
+    <header class="header bg-dark">
+        <div class="container">
+            <div class="header__wrapper flex flex-col">
+                <div class="header__branding flex text-light gap-5">
+                    <img src="../images/vs-code-logo-fixed.png">
+                    <span>Visual Studio Code</span>
+                </div>
+
+                <nav class="header__nav text-light">
+                    <ul class="header__nav__links flex flex-col">
+                        <li><a href="">Docs</a></li>
+                        <li><a href="">Updates</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">API</a></li>
+                        <li><a href="">Extensions</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Learn</a></li>
+                    </ul>
+
+                    <ul class="header__nav__search-and-download flex flex-col gap-5">
+                        <form action="" class="hidden">
+                            <div class="search">
+                                <i class="magnifying-glass"></i>
+                                <input type="text" placeholder="Search Docs">
+                            </div>
+                        </form>
+                        <li><a href="">Search</a></li>
+                        <li class="bg-button"><a href=""><i class="download-sign"></i>Download</a></li>
+                    </ul>
+                </nav>
+
+                <div class="toggle-menu z-50">
+                    <!-- <span class="block bg-light w-6 h-1 mb-1 rounded-sm duration-500 ease-in-out"></span>
+                    <span class="block bg-light w-6 h-1 mb-1 rounded-sm duration-500 ease-in-out opacity-100"></span>
+                    <span class="block bg-light w-6 h-1 mb-1 rounded-sm duration-500 ease-in-out"></span> -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="cta__top">
+        <div class="container">
+            <div class="cta__top__wrapper">
+                <p><span>Version 1.80</span> is now available! Read about the new features and fixes from June.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="banner">
+        <div class="container">
+            <div class="banner__wrapper">
+                <h1 class="banner__header">Code editing. 
+                    <span>Redefined.</span>
+                </h1>
+        
+                <p class="banner__lead">Free. Built on open source. Runs everywhere.</p>
+        
+                <div class="banner__downloads">
+                    <button>Download for Windows</button>
+                    <button><i class="chevron-down"></i></button>
+
+                    <p class="banner__downloads__subtext">Web, Insiders edition, or other platforms</p>
+                </div> 
+        
+                <p class="banner__terms">By using VS Code, you agree to its license and privacy statement.</p>
+        
+                <img src="../images/home-screenshot-win.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="tools">
+        <div class="container">
+            <div class="tools__wrapper">
+                <div class="tools__grid">
+                    <a class="tools__grid__item">
+                        <!-- might put these in a div -->
+                        <!-- <img src="../images"> -->
+                        <i class="light-bulb"></i>
+                        <p></p>
+                    </a>
+
+                    <a class="tools__grid__item">
+                        <!-- might put these in a div -->
+                        <!-- <img src="../images"> -->
+                        <i class="run-and-debug"></i>
+                        <p></p>
+                    </a>
+
+                    <a class="tools__grid__item">
+                        <!-- might put these in a div -->
+                        <!-- <img src="../images"> -->
+                        <i class="git"></i>
+                        <p></p>
+                    </a>
+
+                    <a class="tools__grid__item">
+                        <!-- might put these in a div -->
+                        <!-- <img src="../images"> -->
+                        <i class="extensions"></i>
+                        <p></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- le slider -->
+
+    <section class="swimlane intellisense">
+        <div class="container">
+            <div class="intellisense__wrapper">
+                <img src="" alt="">
+                <h2>Meet IntelliSense</h2>
+                <p>Go beyond syntax highlighting and autocomplete with IntelliSense, which provides smart completions based on variable types, function definitions, and imported modules.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="swimlane debugging">
+        <div class="container">
+            <div class="debugging__wrapper">
+                <img src="" alt="">
+                <h2>Print statement debugging is a thing of the past.</h2>
+                <p>Debug code right from the editor. Launch or attach to your running apps and debug with break points, call stacks, and an interactive console.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="swimlane git">
+        <div class="container">
+            <div class="git__wrapper">
+                <img src="" alt="">
+                <h2>Git commands built-in.</h2>
+                <p>Working with Git and other SCM providers has never been easier. Review diffs, stage files, and make commits right from the editor. Push and pull from any hosted SCM service.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="swimlane extensions">
+        <div class="container">
+            <div class="extensions__wrapper">
+                <img src="" alt="">
+                <h2>Extensible and customizable.</h2>
+                <p>Want even more features? Install extensions to add new languages, themes, debuggers, and to connect to additional services. Extensions run in separate processes, ensuring they won't slow down your editor. <a>Learn more about extensions.</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="swimlane deploy">
+        <div class="container">
+            <div class="deploy__wrapper">
+                <img src="" alt="">
+                <h2>Deploy with confidence and ease</h2>
+                <p>With <a>Microsoft Azure</a> you can deploy and host your React, Angular, Vue, Node, Python (and more!) sites, store and query relational and document based data, and scale with serverless computing, all with ease, <a>all from within VS Code.</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="languages">
+        <div class="container">
+            <div class="languages__wrapper">
+                <h2>VS Code for</h2>
+
+                <div class="languages__grid">
+                    <div class="languages__grid__item">
+                        <img src="../images/javascript.svg">
+                        <p>JavaScript</p>
+                    </div>
+    
+                    <div class="languages__grid__item">
+                        <img src="../images/python.svg">
+                        <p>Python</p>
+                    </div>
+    
+                    <div class="languages__grid__item">
+                        <img src="../images/java.svg">
+                        <p>Java</p>
+                    </div>
+    
+                    <div class="languages__grid__item">
+                        <img src="../images/markdown.svg">
+                        <p>Markdown</p>
+                    </div>
+    
+                    <div class="languages__grid__item">
+                        <img src="../images/typescript.svg">
+                        <p>TypeScript</p>
+                    </div>
+    
+                    <div class="languages__grid__item">
+                        <img src="../images/cpp.svg">
+                        <p>C/C++</p>
+                    </div>
+    
+                    <div class="languages__grid__item">
+                        <img src="../images/json.svg">
+                        <p>JSON</p>
+                    </div>
+    
+                    <div class="languages__grid__item">
+                        <img src="../images/powershell.svg">
+                        <p>Powershell</p>
+                    </div>
+    
+                    <div class="languages__grid__item">
+                        <img src="../images/html.svg">
+                        <p>HTML/CSS</p>
+                    </div>
+    
+                    <div class="languages__grid__item">
+                        <img src="../images/csharp.svg">
+                        <p>C#</p>
+                    </div>
+    
+                    <div class="languages__grid__item">
+                        <img src="../images/php.svg">
+                        <p>PHP</p>
+                    </div>
+    
+                    <div class="languages__grid__item">
+                        <img src="../images/yaml.svg">
+                        <p>YAML</p>
+                    </div>
+                </div>
+
+                <a href="">
+                    <p>and many more languages on the Marketplace...</p>
+                </a>
+
+                <a href="">Get Started Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="downloads">
+        <div class="container">
+            <div class="downloads__wrapper">
+                <div class="downloads__grid downloads__windows">
+                    <img src="../images/windows-logo.png" alt="windows-logo">
+
+                    <button>
+                        <i class="download"></i>
+                        <span>Windows</span>
+                        <span>Windows 8, 10, 11</span>
+                    </button>
+
+                    <table class="downloads__windows__structures">
+                        <tr>
+                            <td><span>User Installer</span></td>
+                            <td><a href="">x64</a></td>
+                            <td><a href="">x86</a></td>
+                            <td><a href="">Arm64</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><span>System Installer</span></td>
+                            <td><a href="">x64</a></td>
+                            <td><a href="">x86</a></td>
+                            <td><a href="">Arm64</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><span>.zip</span></td>
+                            <td><a href="">x64</a></td>
+                            <td><a href="">x86</a></td>
+                            <td><a href="">Arm64</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><span>CLI</span></td>
+                            <td><a href="">x64</a></td>
+                            <td><a href="">x86</a></td>
+                            <td><a href="">Arm64</a></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="downloads__grid downloads__linux">
+                    <img src="../images/windows-logo.png" alt="windows-logo">
+
+                    <button>
+                        <i class="download"></i>
+                        <span>.deb</span>
+                        <span>Debian, Ubuntu</span>
+                    </button>
+
+                    <button>
+                        <i class="download"></i>
+                        <span>.rpm</span>
+                        <span>Red Hat, Fedora, SUSE</span>
+                    </button>
+
+                    <table class="downloads__linux__structures">
+                        <tr>
+                            <td><span>.deb</span></td>
+                            <td><a href="">x64</a></td>
+                            <td><a href="">Arm32</a></td>
+                            <td><a href="">Arm64</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><span>.rpm</span></td>
+                            <td><a href="">x64</a></td>
+                            <td><a href="">Arm32</a></td>
+                            <td><a href="">Arm64</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><span>.tar.gz</span></td>
+                            <td><a href="">x64</a></td>
+                            <td><a href="">Arm32</a></td>
+                            <td><a href="">Arm64</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="">Snap Store</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><span>CLI</span></td>
+                            <td><a href="">x64</a></td>
+                            <td><a href="">Arm32</a></td>
+                            <td><a href="">Arm64</a></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="downloads__grid downloads__mac">
+                    <img src="../images/windows-logo.png" alt="windows-logo">
+
+                    <button>
+                        <i class="download"></i>
+                        <span>Mac</span>
+                        <span>macOS 10.11+</span>
+                    </button>
+
+                    <table class="downloads__mac__structures">
+                        <tr>
+                            <td><span>.zip</span></td>
+                            <td><a href="">Intel chip</a></td>
+                            <td><a href="">Apple silicon</a></td>
+                            <td><a href="">Universal</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><span>CLI</span></td>
+                            <td><a href="">Intel chip</a></td>
+                            <td><a href="">Apple silicon</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta__bottom">
+        <div class="container">
+            <div class="cta__bottom__wrapper">
+                <div class="cta__bottom__text">
+                    <h2>Want new features sooner?</h2>
+                    <p>Get the <a href="">Insiders build</a> instead.</p>
+                </div>
+
+                <div class="cta__bottom__text">
+                    <h2>Use <a href="">vscode.dev</a> for quick edits online!</h2>
+                    <p>GitHub, Azure Repos, and local files.</p>
+                </div>
+
+                <div class="cta__bottom__terms">
+                    <h3>License and Privacy Terms</h3>
+                    <p>By downloading and using Visual Studio Code, you agree to the <a href="">license terms</a> and <a href="">privacy statement</a>. VS Code automatically sends telemetry data and crash dumps to help us improve the product. If you would prefer not to have this data sent please go see <a href="">How to Disable Crash Reporting</a> to learn how to disable it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__left-col">
+                    <ul>
+                        <li><span>Hello from Seattle.</span></li>
+                        <li><a href="">Follow @code</a></li>
+                        <!-- <li><div class="github-star-button">
+                            <iframe src="/assets/github-button.html?user=Microsoft&amp;repo=vscode&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="130px" height="20px" title="GitHub follow button" loading="lazy"></iframe>
+                        </div></li> -->
+                    </ul>
+                </div>
+
+                <div class="footer__right-col">
+                    <ul>
+                        <li><a href="">Support</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Terms of Use</a></li>
+                        <li><a href="">License</a></li>
+                        <li><a href=""><img src="../images/microsoft-logo.png" alt="microsoft-logo"></a>© 2023 Microsoft</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

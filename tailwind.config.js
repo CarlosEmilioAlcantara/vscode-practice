@@ -14,10 +14,11 @@ module.exports = {
       'hover-one': '#b4a0ff',
       'button': '#0066b8',
       'button-hover': '#005ba4',
+      'burger-hover': '#0072be',
     },
-    // fontFamily: {
-    //   'body': 'Noto Sans, sans-serif',
-    // },
+    fontFamily: {
+      'body': ['"Noto Sans", sans-serif'],
+    },
     extend: {},
   },
   plugins: [],

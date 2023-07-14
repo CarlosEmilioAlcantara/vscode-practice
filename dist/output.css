@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -191,6 +191,10 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
   font-size: 100%;
   /* 1 */
   font-weight: inherit;
@@ -342,6 +346,14 @@ menu {
 }
 
 /*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
 Prevent resizing textareas horizontally by default.
 */
 
@@ -427,48 +439,14 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 1.7rem;
   line-height: 1.42857143;
-  p {
-    font-weight: ;
-  }
 }
 
 h2 {
   font-size: 2.2rem;
   font-weight: 200;
-}
-
-.header p {
-  font-size: 1.6rem;
-}
-
-.header ul li {
-  padding: .5rem 0rem;
-}
-
-.toggle-menu span {
-  display: block;
-  background-color: #fff;
-  width: 8rem;
-  height: .22rem;
-  border-radius: .125rem;
-  margin: 0 0 .1rem 0;
-  z-index: 9999;
-}
-
-.banner p {
-  font-size: 1.6rem;
-}
-
-.tools p {
-  font-size: 1.9rem;
-}
-
-.swimlane p {
-  font-weight: 400;
-  line-height: 4rem;
 }
 
 *, ::before, ::after {
@@ -605,6 +583,88 @@ h2 {
   }
 }
 
+/* .container {
+        @apply mx-auto max-w-[140rem] w-full;
+    } */
+
+.header {
+  position: fixed;
+  height: 4.5rem;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.header.container {
+  padding: 1.5rem;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__branding {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.header__nav {
+  display: flex;
+  display: none;
+  flex-direction: column;
+}
+
+.header__nav ul li {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.header__nav__form {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.search__form {
+  display: none;
+}
+
+/* .toggle__menu {
+        @apply
+    } */
+
+.toggle__menu:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 114 190 / var(--tw-bg-opacity));
+}
+
+.toggle__menu span {
+  z-index: 9999;
+  margin-top: .4rem;
+  margin-bottom: .4rem;
+  display: block;
+  height: .2rem;
+  width: 2.2rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.banner p {
+  font-size: 1.6rem;
+}
+
+.tools p {
+  font-size: 1.9rem;
+}
+
+.swimlane p {
+  font-weight: 400;
+  line-height: 4rem;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -617,16 +677,8 @@ h2 {
   display: block;
 }
 
-.flex {
-  display: flex;
-}
-
 .table {
   display: table;
-}
-
-.hidden {
-  display: none;
 }
 
 .h-1 {
@@ -635,14 +687,6 @@ h2 {
 
 .w-6 {
   width: 1.5rem;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.gap-5 {
-  gap: 1.25rem;
 }
 
 .rounded-sm {
@@ -654,19 +698,9 @@ h2 {
   background-color: rgb(0 102 184 / var(--tw-bg-opacity));
 }
 
-.bg-dark {
-  --tw-bg-opacity: 1;
-  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
-}
-
 .bg-light {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.text-light {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .opacity-100 {
@@ -681,19 +715,8 @@ h2 {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* * {
-    @apply padding: 0;
-    @apply margin: 0;
-    @apply box-sizing: border-box;
-}
+/* base = base.scss dito mga reset at panimula na styles
+general rule of thumb is that what goes here can be overridden */
 
-
-*/
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  max-width: 140rem;
-}
+/* sa components mga classes na nagbabago ng itsura */
 

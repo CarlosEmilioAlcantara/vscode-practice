@@ -441,6 +441,7 @@ html {
 body {
   font-family: "Noto Sans", sans-serif;
   font-size: 1.7rem;
+  font-weight: 400;
   line-height: 1.42857143;
 }
 
@@ -553,43 +554,55 @@ h2 {
   width: 100%;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 0px) {
   .container {
-    max-width: 640px;
+    max-width: 0px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 650px) {
   .container {
-    max-width: 768px;
+    max-width: 650px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 770px) {
   .container {
-    max-width: 1024px;
+    max-width: 770px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 950px) {
   .container {
-    max-width: 1280px;
+    max-width: 950px;
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1000px) {
   .container {
-    max-width: 1536px;
+    max-width: 1000px;
   }
 }
 
-/* .container {
-        @apply mx-auto max-w-[140rem] w-full;
-    } */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 115rem;
+}
 
 .header {
   position: fixed;
-  height: 4.5rem;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  display: block;
   width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgb(51 51 51 / var(--tw-bg-opacity));
@@ -597,43 +610,100 @@ h2 {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.header.container {
-  padding: 1.5rem;
+.header .container {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-.header__wrapper {
-  display: flex;
-  justify-content: space-between;
-}
+/* 
+    .header__wrapper {
+        @apply flex justify-between items-center lsm:justify-around
+    } */
 
 .header__branding {
   display: flex;
   gap: 1.25rem;
+  font-size: 1.8rem;
+}
+
+.header__branding span {
+  white-space: nowrap;
+}
+
+.header__branding img {
+  height: 2.3rem;
+  width: 2.3rem;
 }
 
 .header__nav {
   display: flex;
-  display: none;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.header__nav ul li {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+.header__nav__left {
+  display: flex;
+}
+
+@media (min-width: 650px) {
+  .header__nav__left ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+  }
+
+  .header__nav__left ul li {
+    --tw-text-opacity: 1;
+    color: rgb(204 204 204 / var(--tw-text-opacity));
+  }
 }
 
 .header__nav__form {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  display: flex;
 }
 
-.search__form {
-  display: none;
+.search__bar {
+  display: flex;
+  align-items: center;
 }
 
-/* .toggle__menu {
-        @apply
-    } */
+.search__bar i {
+  position: absolute;
+  margin-left: 1.25rem;
+}
+
+@media (min-width: 650px) {
+  .search__text {
+    display: none;
+  }
+}
+
+.dl__text {
+  display: flex;
+  align-items: center;
+}
+
+.search__bar input {
+  height: 5.0rem;
+  width: 18.3rem;
+  background-color: rgba(255,255,255,.08);
+  padding-left: 4rem;
+  font-size: 1.4rem;
+}
+
+.toggle__menu {
+  border-radius: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 650px) {
+  .toggle__menu {
+    display: none;
+  }
+}
 
 .toggle__menu:hover {
   --tw-bg-opacity: 1;
@@ -641,7 +711,6 @@ h2 {
 }
 
 .toggle__menu span {
-  z-index: 9999;
   margin-top: .4rem;
   margin-bottom: .4rem;
   display: block;
@@ -652,8 +721,36 @@ h2 {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.cta__top {
+  margin-top: 5.2rem;
+  display: flex;
+  height: 6.5rem;
+  width: 100%;
+  align-items: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 37 43 / var(--tw-bg-opacity));
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(204 204 204 / var(--tw-text-opacity));
+}
+
+.cta__top p {
+  font-size: 1.5rem;
+}
+
+.cta__top p span {
+  --tw-text-opacity: 1;
+  color: rgb(0 152 255 / var(--tw-text-opacity));
+  text-decoration-line: underline;
+}
+
+.cta__top .container {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 .banner p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .tools p {
@@ -661,7 +758,6 @@ h2 {
 }
 
 .swimlane p {
-  font-weight: 400;
   line-height: 4rem;
 }
 

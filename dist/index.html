@@ -7,40 +7,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./output.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
-                <div class="header__branding">
-                    <img src="../images/vs-code-logo-fixed.png">
-                    <span>Visual Studio Code</span>
-                </div>
-
                 <nav class="header__nav">
-                    <ul class="header__nav__links">
-                        <li><a href="">Docs</a></li>
-                        <li><a href="">Updates</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">API</a></li>
-                        <li><a href="">Extensions</a></li>
-                        <li><a href="">FAQ</a></li>
-                        <li><a href="">Learn</a></li>
-                    </ul>
-
-                    <ul class="header__nav__form">
-                        <form action="" class="search__form">
-                            <div class="search">
-                                <i class="magnifying-glass"></i>
-                                <input type="text" placeholder="Search Docs">
-                            </div>
-                        </form>
-                        <li><a href="">Search</a></li>
-                        <li class="bg-button"><a href=""><i class="download-sign"></i>Download</a></li>
-                    </ul>
+                    <div class="header__nav__left">
+                        <div class="header__branding">
+                            <img src="../images/vs-code-logo-fixed.png">
+                            <a href=""><span>Visual Studio Code</span></a>
+                        </div>
+    
+                        <ul class="header__nav__links">
+                            <li><a href="">Docs</a></li>
+                            <li><a href="">Updates</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">API</a></li>
+                            <li><a href="">Extensions</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Learn</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="header__nav__right">
+                        <ul class="header__nav__form">
+                            <li>
+                                <form action="" class="search__form">
+                                    <div class="search__bar">
+                                        <i class="fa-solid fa-magnifying-glass fa-rotate-90"></i>
+                                        <input type="text" placeholder="Search Docs">
+                                    </div>
+                                </form>
+                            </li>
+                            <li class="search__text"><a href="">Search</a></li>
+                            <li class="dl__text bg-button">
+                                <a href="">
+                                    <i class="fa fa-arrow-down-to-line"></i>
+                                    </i>Download
+                            </a></li>
+                        </ul>
+                    </div>
                 </nav>
-
+                
                 <div class="toggle__menu z-50">
                     <!-- <span class="block bg-light w-6 h-1 mb-1 rounded-sm duration-500 ease-in-out"></span>
                     <span class="block bg-light w-6 h-1 mb-1 rounded-sm duration-500 ease-in-out opacity-100"></span>
@@ -55,9 +66,7 @@
 
     <section class="cta__top">
         <div class="container">
-            <div class="cta__top__wrapper">
-                <p><span>Version 1.80</span> is now available! Read about the new features and fixes from June.</p>
-            </div>
+            <p><span>Version 1.80</span> is now available! Read about the new features and fixes from June.</p>
         </div>
 
     </section>

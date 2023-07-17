@@ -11,7 +11,7 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     body {
-        @apply font-body text-[1.7rem] leading-[1.42857143]
+        @apply font-body text-[1.7rem] leading-[1.42857143] font-[400]
     } 
 
     h2 {
@@ -21,56 +21,104 @@ general rule of thumb is that what goes here can be overridden */
 
 /* sa components mga classes na nagbabago ng itsura */
 @layer components {
-    /* .container {
-        @apply mx-auto max-w-[140rem] w-full;
-    } */
+    .container {
+        @apply mx-auto max-w-[115rem] w-full;
+    }
 
     .header {
-        @apply bg-dark text-light fixed w-[100%] h-[4.5rem]
+        @apply block bg-dark text-light w-[100%] /* py-[.61rem] */ z-[9999] top-0 left-0 fixed
     }
 
-    .header.container {
-        @apply p-6
-    }
-
+    .header .container {
+        @apply px-[2rem]
+    } 
+    /* 
     .header__wrapper {
-        @apply flex justify-between
-    }
+        @apply flex justify-between items-center lsm:justify-around
+    } */
 
     .header__branding {
-        @apply flex gap-5
+        @apply flex gap-5 text-[1.8rem]
+    }
+
+    .header__branding span {
+        @apply whitespace-nowrap
+    }
+
+    .header__branding img {
+        @apply w-[2.3rem] h-[2.3rem]
     }
 
     .header__nav {
-        @apply hidden flex flex-col
+        @apply flex justify-between items-center
     }
 
-    .header__nav ul li {
-        @apply py-[.5rem]
+    .header__nav__left {
+        @apply flex
+    }
+
+    .header__nav__left ul {
+        @apply lsm:flex lsm:flex-row lsm:gap-[0rem] 
+    }
+
+    .header__nav__left ul li {
+        @apply lsm:text-gray
     }
 
     .header__nav__form {
-        @apply py-[.5rem]
+        @apply flex
     }
 
-    .search__form {
-        @apply hidden
+    .search__bar {
+        @apply flex items-center 
     }
 
-    /* .toggle__menu {
-        @apply
-    } */
+    .search__bar i {
+        @apply absolute ml-5
+    }
+
+    .search__text {
+        @apply lsm:hidden
+    }
+
+    .dl__text {
+        @apply flex items-center
+    }
+
+    .search__bar input {
+        @apply bg-search-bar h-[5.0rem] pl-16 w-[18.3rem] text-[1.4rem]
+    }
+
+    .toggle__menu {
+        @apply py-2 px-[1rem] rounded-lg lsm:hidden
+    }
 
     .toggle__menu:hover {
         @apply bg-burger-hover
     }
 
     .toggle__menu span {
-        @apply block bg-light w-[2.2rem] h-[.2rem] rounded-full my-[.4rem] z-[9999]
+        @apply block bg-light w-[2.2rem] h-[.2rem] rounded-full my-[.4rem] 
+    }
+
+    .cta__top {
+        @apply bg-darker text-gray mt-[5.2rem] w-[100%] h-[6.5rem] flex items-center text-center
+    }
+
+    .cta__top p {
+        @apply text-[1.5rem]
+    }
+
+    .cta__top p span {
+        @apply underline text-accent
+    }
+
+    .cta__top .container {
+        @apply px-20
     }
 
     .banner p {
-        @apply text-[1.6rem]
+        @apply text-[1.5rem]
     } 
 
     .tools p {
@@ -78,7 +126,7 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .swimlane p {
-        @apply font-[400] leading-[4rem]
+        @apply leading-[4rem]
     }
 }
 

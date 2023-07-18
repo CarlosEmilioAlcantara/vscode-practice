@@ -29,38 +29,44 @@
                             <li><a href="">Extensions</a></li>
                             <li><a href="">FAQ</a></li>
                             <li><a href="">Learn</a></li>
-                        </ul>
-                    </div>
-    
-                    <div class="header__nav__right">
-                        <ul class="header__nav__form">
-                            <li>
-                                <form action="" class="search__form">
-                                    <div class="search__bar">
-                                        <i class="fa-solid fa-magnifying-glass fa-rotate-90"></i>
-                                        <input type="text" placeholder="Search Docs">
-                                    </div>
-                                </form>
-                            </li>
                             <li class="search__text"><a href="">Search</a></li>
-                            <li class="dl__text bg-button">
-                                <a href="">
-                                    <i class="fa fa-arrow-down-to-line"></i>
-                                    </i>Download
-                            </a></li>
                         </ul>
                     </div>
                 </nav>
+
+                <div class="header__nav__right">
+                    <ul class="header__nav__form">
+                        <li>
+                            <form action="" class="search__form">
+                                <div class="search__bar">
+                                    <i class="fa-solid fa-magnifying-glass fa-rotate-90"></i>
+                                    <input type="text" placeholder="Search Docs">
+                                </div>
+                            </form>
+                        </li>
+
+                        <li class="dl__link">
+                            <a href="">
+                                <div class="dl__text">
+                                    <i class="fa-solid fa-download"></i>
+                                    <span>Download</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 
                 <div class="toggle__menu z-50">
-                    <!-- <span class="block bg-light w-6 h-1 mb-1 rounded-sm duration-500 ease-in-out"></span>
-                    <span class="block bg-light w-6 h-1 mb-1 rounded-sm duration-500 ease-in-out opacity-100"></span>
-                    <span class="block bg-light w-6 h-1 mb-1 rounded-sm duration-500 ease-in-out"></span> -->
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </div>
+        </div>
+
+        <div class="header__dropdown__dl">
+            <i class="fa-solid fa-download"></i>
+            <span><a href="">Download</a></span>
         </div>
     </header>
 
@@ -68,28 +74,41 @@
         <div class="container">
             <p><span>Version 1.80</span> is now available! Read about the new features and fixes from June.</p>
         </div>
-
     </section>
 
     <section class="banner">
         <div class="container">
             <div class="banner__wrapper">
-                <h1 class="banner__header">Code editing. 
-                    <span>Redefined.</span>
-                </h1>
-        
-                <p class="banner__lead">Free. Built on open source. Runs everywhere.</p>
-        
-                <div class="banner__downloads">
-                    <button>Download for Windows</button>
-                    <button><i class="chevron-down"></i></button>
+                <div class="banner__content">
+                    <div class="banner__header">
+                        <h1>Code editing. 
+                        <span>Redefined.</span>
+                        </h1>
+                    </div>
+    
+                    <p class="banner__lead">Free. Built on open source. Runs everywhere.</p>
+            
+                    <div class="banner__downloads">
+                        <button class="banner__downloads__button__left">Download for Windows <span>Stable Build</span></button>
+    
+                        <button class="banner__downloads__button__right"><i class="fa-solid fa-chevron-down"></i></button>
+                    </div> 
+    
+                    <p class="banner__links">
+                        <a href="https://vscode.dev/">Web</a>, 
+                        <a href="https://code.visualstudio.com/insiders">
+                            Insiders edition</a>, or
+                        <a href="https://code.visualstudio.com/#alt-downloads">
+                            other platforms
+                        </a>
+                    </p>
+            
+                    <p class="banner__terms">By using VS Code, you agree to its <a href="https://code.visualstudio.com/#home-terms">license and privacy statement</a>.</p>
+                </div>
 
-                    <p class="banner__downloads__subtext">Web, Insiders edition, or other platforms</p>
-                </div> 
-        
-                <p class="banner__terms">By using VS Code, you agree to its license and privacy statement.</p>
-        
-                <img src="../images/home-screenshot-win.png" alt="">
+                <div class="banner__img">
+                    <img src="../images/home-screenshot-win.png" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -426,5 +445,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="../scripts/script.js"></script>
 </body>
 </html>

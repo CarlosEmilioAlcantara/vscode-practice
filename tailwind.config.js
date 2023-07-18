@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./dist/**/*.{html,js}"],
+  important: true,
   theme: {
     screens: {
       'sm': '0px',
@@ -10,17 +11,17 @@ module.exports = {
 
       'lmd': '770px',
 
-      'md': '950px',
+      'md': '990px',
 
-      'lg': '1000px',
+      'lg': '1200px',
       // => @media (min-width: 1024px) { ... }
 
-      'xl': '1200px',
-      // => @media (min-width: 1280px) { ... }
+      // 'xl': '1200px',
+      // // => @media (min-width: 1280px) { ... }
     },
     colors: {
       'light': '#fff',
-      'dark': '#333',
+      'dark': '#2c2c32',
       'darker': '#25252b',
       'gray': '#cccccc',
       'accent': '#0098ff',

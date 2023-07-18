@@ -26,16 +26,20 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .header {
-        @apply block bg-dark text-light w-[100%] /* py-[.61rem] */ z-[9999] top-0 left-0 fixed
+        @apply block bg-dark text-light w-[100%] /* py-[.61rem] */ z-[9999] top-0 left-0 fixed h-[5rem] md:h-auto
+    }
+
+    .header.open {
+        @apply block bg-dark text-light w-[100%] /* py-[.61rem] */ z-[9999] top-0 left-0 fixed h-[36rem] overflow-y-auto md:h-auto
     }
 
     .header .container {
-        @apply px-[2rem]
+        @apply px-[2rem] py-[1rem] md:py-0
     } 
-    /* 
+    
     .header__wrapper {
-        @apply flex justify-between items-center lsm:justify-around
-    } */
+        @apply relative flex justify-between items-center md:items-center
+    }
 
     .header__branding {
         @apply flex gap-5 text-[1.8rem]
@@ -49,52 +53,72 @@ general rule of thumb is that what goes here can be overridden */
         @apply w-[2.3rem] h-[2.3rem]
     }
 
-    .header__nav {
+    /* .header__nav {
         @apply flex justify-between items-center
-    }
+    } */
 
     .header__nav__left {
-        @apply flex
+        @apply flex flex-col gap-11 md:flex-row md:gap-8 
     }
 
-    .header__nav__left ul {
-        @apply lsm:flex lsm:flex-row lsm:gap-[0rem] 
+    .header__nav__links {
+        @apply hidden transform transition-transform duration-200 ease-in-out md:flex md:flex-row md:gap-8 md:items-center
+    }
+
+    .header__nav__links.open {
+        @apply flex flex-col gap-[1.4rem] 
     }
 
     .header__nav__left ul li {
-        @apply lsm:text-gray
+        @apply text-[1.6rem] md:text-gray
+    }
+
+    .header__dropdown__dl {
+        @apply hidden 
+    }
+
+    .header__dropdown__dl.open {
+        @apply flex items-center gap-5 bg-button col-span-2 h-[5rem] pl-12 md:hidden
+    }
+
+    .header__nav__right {
+        @apply hidden md:block
     }
 
     .header__nav__form {
-        @apply flex
+        @apply flex items-center md:gap-20 lg:gap-0
     }
 
     .search__bar {
-        @apply flex items-center 
-    }
-
-    .search__bar i {
-        @apply absolute ml-5
-    }
-
-    .search__text {
-        @apply lsm:hidden
-    }
-
-    .dl__text {
         @apply flex items-center
     }
 
+    .search__bar i {
+        @apply absolute ml-5 md:text-gray lg:text-light
+    }
+
     .search__bar input {
-        @apply bg-search-bar h-[5.0rem] pl-16 w-[18.3rem] text-[1.4rem]
+        @apply sm:hidden lg:block bg-search-bar h-[5.0rem] pl-16 w-[18.3rem] text-[1.4rem]
+    }
+
+    .search__text {
+        @apply md:hidden
+    }
+
+    .dl__link {
+        @apply flex items-center bg-button md:h-[5.0rem]
+    }
+
+    .dl__text {
+        @apply flex items-center gap-6 text-[1.55rem] md:px-6 
     }
 
     .toggle__menu {
-        @apply py-2 px-[1rem] rounded-lg lsm:hidden
+        @apply absolute right-0 top-[-1] w-[4.2rem] h-[3.2rem] inline-block py-2 px-[1rem] rounded-lg md:hidden
     }
 
     .toggle__menu:hover {
-        @apply bg-burger-hover
+        @apply bg-burger-hover 
     }
 
     .toggle__menu span {
@@ -102,7 +126,7 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .cta__top {
-        @apply bg-darker text-gray mt-[5.2rem] w-[100%] h-[6.5rem] flex items-center text-center
+        @apply bg-darker text-gray mt-[5rem] flex items-center text-center p-5
     }
 
     .cta__top p {
@@ -114,12 +138,8 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .cta__top .container {
-        @apply px-20
+        @apply px-20 overflow-hidden max-w-[60rem] md:max-w-max md:py-0
     }
-
-    .banner p {
-        @apply text-[1.5rem]
-    } 
 
     .tools p {
         @apply text-[1.9rem]
@@ -127,6 +147,82 @@ general rule of thumb is that what goes here can be overridden */
 
     .swimlane p {
         @apply leading-[4rem]
+    }
+
+    .banner {
+        @apply bg-dark text-gray py-[3rem]
+    } 
+
+    .banner a {
+        @apply text-accent
+    }
+
+    .banner a:hover {
+        @apply underline
+    }
+
+    .banner .container {
+        @apply max-w-[98rem]     
+    }
+
+    .banner__wrapper {
+        @apply flex flex-col text-center gap-5 md:flex-row md:justify-between
+    }
+
+    .banner__content {
+        @apply flex flex-col items-center text-center gap-5
+    }
+
+    .banner__img  {
+        @apply w-[61.7rem] lg:w-[75rem]
+    }
+
+    .banner__header {
+        @apply mt-8
+    }
+
+    .banner__header h1 {
+        @apply flex flex-col text-light text-[4rem] font-light leading-tight
+    }
+
+    .banner__header h1 span {
+        @apply font-medium
+    }
+
+    .banner__lead {
+        @apply text-[1.5rem] font-light md:text-[1.7rem]
+    }
+
+    .banner__downloads {
+        @apply flex gap-1 text-light
+    }
+
+    .banner__downloads button {
+        @apply bg-button
+    }
+
+    .banner__downloads button:hover {
+        @apply bg-button-hover
+    }
+
+    .banner__downloads__button__left {
+        @apply flex flex-col items-center text-[1.4rem] font-semibold py-[1rem] px-[4.8rem] whitespace-nowrap md:text-[1.7rem] md:px-6
+    }
+
+    .banner__downloads__button__left span {
+        @apply text-[1.1rem] font-light md:text-[1.3rem]
+    }
+
+    .banner__downloads__button__right {
+        @apply px-[1rem]
+    }
+
+    .banner__links {
+        @apply  bg-darker text-[1.1rem] px-[4.5rem] py-[1rem] rounded-xl md:text-[1.3rem]
+    }
+
+    .banner__terms {
+        @apply text-[1.1rem] font-light w-[20rem] md:text-[1.3rem]
     }
 }
 

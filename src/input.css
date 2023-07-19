@@ -33,12 +33,20 @@ general rule of thumb is that what goes here can be overridden */
         @apply block bg-dark text-light w-[100%] /* py-[.61rem] */ z-[9999] top-0 left-0 fixed h-[36rem] overflow-y-auto md:h-auto
     }
 
+    .header.active {
+        @apply block bg-dark text-light w-[100%] /* py-[.61rem] */ z-[9999] top-0 left-0 fixed h-[5rem] overflow-y-auto md:h-auto shadow-3xl
+    }
+
+    .header.open.active {
+        @apply block bg-dark text-light w-[100%] /* py-[.61rem] */ z-[9999] top-0 left-0 fixed h-[36rem] overflow-y-auto md:h-auto shadow-3xl
+    }
+
     .header .container {
         @apply px-[2rem] py-[1rem] md:py-0
     } 
     
     .header__wrapper {
-        @apply relative flex justify-between items-center md:items-center
+        @apply relative flex justify-between md:items-center
     }
 
     .header__branding {
@@ -81,6 +89,10 @@ general rule of thumb is that what goes here can be overridden */
         @apply flex items-center gap-5 bg-button col-span-2 h-[5rem] pl-12 md:hidden
     }
 
+    .header__dropdown__dl.open:hover {
+        @apply bg-hover
+    }
+
     .header__nav__right {
         @apply hidden md:block
     }
@@ -98,7 +110,7 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .search__bar input {
-        @apply sm:hidden lg:block bg-search-bar h-[5.0rem] pl-16 w-[18.3rem] text-[1.4rem]
+        @apply sm:hidden lg:block bg-search-bar h-[5.0rem] pl-16 w-[18.3rem] text-[1.4rem] placeholder-light font-extralight
     }
 
     .search__text {
@@ -107,6 +119,10 @@ general rule of thumb is that what goes here can be overridden */
 
     .dl__link {
         @apply flex items-center bg-button md:h-[5.0rem]
+    }
+
+    .dl__link:hover {
+        @apply bg-hover
     }
 
     .dl__text {
@@ -141,17 +157,17 @@ general rule of thumb is that what goes here can be overridden */
         @apply px-20 overflow-hidden max-w-[60rem] md:max-w-max md:py-0
     }
 
-    .tools p {
-        @apply text-[1.9rem]
-    }
-
     .swimlane p {
         @apply leading-[4rem]
     }
 
     .banner {
-        @apply bg-dark text-gray py-[3rem]
-    } 
+        @apply bg-dark text-gray pt-[3rem] pb-[10rem] md:pb-[6rem] lg:pb-[3rem]
+    }
+    
+    /* .banner .container {
+        @apply max-w-[98rem] lg:max-w-[192rem]
+    } */
 
     .banner a {
         @apply text-accent
@@ -161,28 +177,24 @@ general rule of thumb is that what goes here can be overridden */
         @apply underline
     }
 
-    .banner .container {
-        @apply max-w-[98rem]     
-    }
-
     .banner__wrapper {
-        @apply flex flex-col text-center gap-5 md:flex-row md:justify-between
+        @apply flex flex-col text-center justify-center items-center gap-5 md:flex-row md:items-start
     }
 
     .banner__content {
-        @apply flex flex-col items-center text-center gap-5
+        @apply flex flex-col items-center text-center gap-5 md:mt-12
     }
 
-    .banner__img  {
-        @apply w-[61.7rem] lg:w-[75rem]
+    .banner__img img {
+        @apply w-[61.7rem] lg:w-[75rem] lg:h-[59rem]
     }
 
-    .banner__header {
+    /* .banner__header {
         @apply mt-8
-    }
+    } */
 
     .banner__header h1 {
-        @apply flex flex-col text-light text-[4rem] font-light leading-tight
+        @apply flex flex-col text-light text-[4rem] font-light leading-tight md:text-[4.75rem] lg:text-[5rem]
     }
 
     .banner__header h1 span {
@@ -190,7 +202,7 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .banner__lead {
-        @apply text-[1.5rem] font-light md:text-[1.7rem]
+        @apply text-[1.5rem] font-light md:text-[1.7rem] md:max-w-md lg:max-w-full lg:text-[1.8rem]
     }
 
     .banner__downloads {
@@ -206,11 +218,11 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .banner__downloads__button__left {
-        @apply flex flex-col items-center text-[1.4rem] font-semibold py-[1rem] px-[4.8rem] whitespace-nowrap md:text-[1.7rem] md:px-6
+        @apply flex flex-col items-center text-[1.4rem] font-semibold py-[1rem] px-[4.8rem] whitespace-nowrap md:text-[1.7rem] md:px-6 lg:text-[1.8rem]
     }
 
     .banner__downloads__button__left span {
-        @apply text-[1.1rem] font-light md:text-[1.3rem]
+        @apply text-[1.1rem] font-light md:text-[1.3rem] lg:text-[1.4rem]
     }
 
     .banner__downloads__button__right {
@@ -218,11 +230,203 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .banner__links {
-        @apply  bg-darker text-[1.1rem] px-[4.5rem] py-[1rem] rounded-xl md:text-[1.3rem]
+        @apply  bg-darker text-[1.1rem] font-light px-[4.5rem] py-[.8rem] rounded-xl md:text-[1.3rem] md:px-[.9rem] lg:text-[1.4rem] lg:px-[.8rem]
     }
 
     .banner__terms {
-        @apply text-[1.1rem] font-light w-[20rem] md:text-[1.3rem]
+        @apply text-[1.1rem] font-light w-[20rem] md:text-[1.2rem]
+    }
+
+    .tools {
+        @apply bg-light text-dark
+    }
+
+    .tools p {
+        @apply text-[1.6rem]
+    }
+
+    .tools__grid {
+        @apply grid grid-cols-2 lmd:grid-cols-4
+    }
+
+    .tools__grid__item {
+        @apply flex flex-col items-center text-center gap-5 py-8 mx-6
+    }
+
+    .tools__grid__item:hover {
+        @apply bg-gray
+    }
+
+    .tools__grid__item:hover i.fa-lightbulb {
+        @apply text-lightbulb
+    }
+
+    .tools__grid__item:hover i.fa-bug {
+        @apply text-bug
+    }
+
+    .tools__grid__item:hover i.fa-play {
+        @apply text-bug
+    }
+
+    .tools__grid__item:hover i.fa-code-branch {
+        @apply text-git
+    }
+
+    .tools__grid__item:hover i.fa-cubes {
+        @apply text-[#000000]
+    }
+
+    /* /* .tools__wrapper {
+        @apply relative
+    } */
+
+    .debug {
+        @apply relative
+    }
+
+    .fa-bug {
+        @apply absolute bottom-0 right-11
+    }
+
+    .swimlane {
+        @apply py-[5.7rem]
+    }
+
+    .swimlane .container {
+        @apply px-[1.5rem]
+    }
+
+    .swimlane__wrapper {
+        @apply flex flex-col items-center md:flex-row md:justify-between md:align-middle
+    }
+
+    .swimlane__img {
+        @apply w-[43.2rem] md:w-[30rem] lg:w-[36rem]
+    }
+
+    .swimlane__img img {
+        @apply w-[100%]
+    }
+
+    .swimlane__content {
+        @apply flex flex-col px-4 gap-12 lmd:max-w-[56rem]
+    }
+
+    .swimlane__content h2 {
+        @apply text-[1.9rem] lmd:text-[2.7rem] md:text-[2.85rem] lg:text-[3rem]
+    }
+
+    .swimlane__content p {
+        @apply text-[1.45rem] lmd:text-[1.62rem] md:text-[1.7rem] lg:text-[1.8rem]
+    }
+
+    .swimlane__content a {
+        @apply text-accent-one
+    }
+
+    .swimlane__content a:hover {
+        @apply text-hover underline
+    }
+
+    .debugging {
+        @apply bg-less-gray
+    }
+
+    .debugging .swimlane__wrapper  {
+        @apply md:flex-row-reverse
+    }
+
+    .extensions {
+        @apply bg-less-gray
+    }
+
+    .extensions .swimlane__wrapper {
+        @apply md:flex-row-reverse
+    }
+
+    .extensions img {
+        @apply transform transition duration-500
+    }
+
+    .extensions img:hover {
+        @apply scale-[1.05]
+    }
+
+    .languages {
+        @apply bg-less-gray py-[6rem]
+    }
+
+    .languages__wrapper {
+        @apply flex flex-col items-center
+    }
+
+    .languages h2 {
+        @apply text-[1.9rem] mb-[4rem] lmd:text-[2.7rem] md:text-[2.85rem] lg:text-[3rem]
+    }
+
+    .languages p {
+        @apply text-[1.45rem] lmd:text-[1.62rem] md:text-[1.7rem] lg:text-[1.8rem]
+    }
+
+    .languages__grid {
+        @apply mb-11 grid grid-cols-2 gap-[2rem] gap-x-48 lmd:grid-cols-4 lmd:gap-x-32 md:grid-cols-6 md:gap-x-20
+    }
+
+    .languages__grid__item {
+        @apply flex items-center gap-2
+    }
+
+    .languages a {
+        @apply text-accent-one mb-[6rem]
+    }
+
+    .languages a:hover {
+        @apply text-hover underline
+    }
+
+    .languages button {
+        @apply bg-button text-light text-[2rem] font-semibold py-[1.5rem] px-[3.5rem]
+    }
+
+    .languages button:hover {
+        @apply bg-hover
+    }
+
+    .downloads {
+        @apply py-[5.1rem]
+    }
+
+    .downloads__wrapper {
+        @apply flex flex-col items-center
+    }
+
+    .downloads img {
+        @apply w-[10rem] h-[10rem]
+    }
+
+    .downloads__grid {
+        @apply flex flex-col items-center gap-7
+    }
+
+    .downloads__grid button {
+        @apply flex flex-col items-center text-[1.5rem] font-semibold py-[1rem] px-[7.2rem] bg-button text-light
+    }
+
+    .downloads__grid button:hover {
+        @apply bg-hover
+    }
+
+    .downloads__button__title {
+        @apply flex gap-6 items-center
+    }
+
+    .downloads__grid button span {
+        @apply text-[1rem]
+    }
+
+    .downloads__grid td span {
+        @apply text-[1.6rem] font-semibold text-center
     }
 }
 

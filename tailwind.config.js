@@ -6,7 +6,7 @@ module.exports = {
     screens: {
       'sm': '0px',
       
-      'lsm': '650px',
+      'lsm': '660px',
       // => @media (min-width: 640px) { ... }
 
       'lmd': '770px',
@@ -23,6 +23,7 @@ module.exports = {
       'light': '#fff',
       'dark': '#2c2c32',
       'darker': '#25252b',
+      'less-gray': '#f5f5f5',
       'gray': '#cccccc',
       'accent': '#0098ff',
       'accent-one': '#0071bc',
@@ -32,12 +33,19 @@ module.exports = {
       'button': '#0066b8',
       'button-hover': '#005ba4',
       'burger-hover': '#0072be',
-      'search-bar': 'rgba(255,255,255,.08)'
+      'search-bar': 'rgba(255,255,255,.08)',
+      'lightbulb': '#2e3192',
+      'bug': '#37b34a',
+      'git': '#f42534',
     },
     fontFamily: {
       'body': ['"Noto Sans", sans-serif'],
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        '3xl': '0 3px 3px 0px rgba(0, 0, 0, 0.3)',
+      }
+    },
   },
   plugins: [],
 }

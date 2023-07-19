@@ -117,32 +117,34 @@
         <div class="container">
             <div class="tools__wrapper">
                 <div class="tools__grid">
-                    <a class="tools__grid__item">
+                    <a href="https://code.visualstudio.com/#meet-intellisense" class="tools__grid__item">
                         <!-- might put these in a div -->
                         <!-- <img src="../images"> -->
-                        <i class="light-bulb"></i>
-                        <p></p>
+                        <i class="fa-regular fa-lightbulb fa-3x"></i>
+                        <p>IntelliSense</p>
                     </a>
 
-                    <a class="tools__grid__item">
+                    <a href="https://code.visualstudio.com/#powerful-debugging" class="tools__grid__item">
                         <!-- might put these in a div -->
-                        <!-- <img src="../images"> -->
-                        <i class="run-and-debug"></i>
-                        <p></p>
+                        <div class="debug">
+                            <i class="fa-solid fa-bug fa-lg"></i>
+                            <i class="fa-solid fa-play fa-3x"></i>
+                        </div>
+                        <p>Run and Debug</p>
                     </a>
 
-                    <a class="tools__grid__item">
+                    <a href="https://code.visualstudio.com/#built-in-git" class="tools__grid__item">
                         <!-- might put these in a div -->
                         <!-- <img src="../images"> -->
-                        <i class="git"></i>
-                        <p></p>
+                        <i class="fa-solid fa-code-branch fa-3x"></i>
+                        <p>Built-In-Git</p>
                     </a>
 
-                    <a class="tools__grid__item">
+                    <a href="https://code.visualstudio.com/#hundreds-of-extensions" class="tools__grid__item">
                         <!-- might put these in a div -->
                         <!-- <img src="../images"> -->
-                        <i class="extensions"></i>
-                        <p></p>
+                        <i class="fa-solid fa-cubes fa-3x"></i>
+                        <p>Extensions</p>
                     </a>
                 </div>
             </div>
@@ -153,50 +155,77 @@
 
     <section class="swimlane intellisense">
         <div class="container">
-            <div class="intellisense__wrapper">
-                <img src="" alt="">
-                <h2>Meet IntelliSense</h2>
-                <p>Go beyond syntax highlighting and autocomplete with IntelliSense, which provides smart completions based on variable types, function definitions, and imported modules.</p>
+            <div class="swimlane__wrapper">
+                <div class="swimlane__img">
+                    <img src="../images/swimlane-intellisense.svg" alt="swimlane-intellisense">
+                </div>
+
+                <div class="swimlane__content">
+                    <h2>Meet IntelliSense</h2>
+                    <p>Go beyond syntax highlighting and autocomplete with IntelliSense, which provides smart completions based on variable types, function definitions, and imported modules.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="swimlane debugging">
         <div class="container">
-            <div class="debugging__wrapper">
-                <img src="" alt="">
-                <h2>Print statement debugging is a thing of the past.</h2>
-                <p>Debug code right from the editor. Launch or attach to your running apps and debug with break points, call stacks, and an interactive console.</p>
+            <div class="swimlane__wrapper">
+                <div class="swimlane__img">
+                    <img src="../images/swimlane-debug.svg" alt="swimlane-debug">
+                </div>
+
+                <div class="swimlane__content">
+                    <h2>Print statement debugging is a thing of the past.</h2>
+                    <p>Debug code right from the editor. Launch or attach to your running apps and debug with break points, call stacks, and an interactive console.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="swimlane git">
         <div class="container">
-            <div class="git__wrapper">
-                <img src="" alt="">
-                <h2>Git commands built-in.</h2>
-                <p>Working with Git and other SCM providers has never been easier. Review diffs, stage files, and make commits right from the editor. Push and pull from any hosted SCM service.</p>
+            <div class="swimlane__wrapper">
+                <div class="swimlane__img">
+                    <img src="../images/swimlane-git.svg" alt="swimlane-git">
+                </div>
+
+                <div class="swimlane__content">
+                    <h2>Git commands built-in.</h2>
+                    <p>Working with Git and other SCM providers has never been easier. Review diffs, stage files, and make commits right from the editor. Push and pull from any hosted SCM service.</p>
+                </div>
             </div>
         </div>
     </section>
     
     <section class="swimlane extensions">
         <div class="container">
-            <div class="extensions__wrapper">
-                <img src="" alt="">
-                <h2>Extensible and customizable.</h2>
-                <p>Want even more features? Install extensions to add new languages, themes, debuggers, and to connect to additional services. Extensions run in separate processes, ensuring they won't slow down your editor. <a>Learn more about extensions.</a></p>
+            <div class="swimlane__wrapper">
+                <a href="https://marketplace.visualstudio.com/VSCode">
+                    <div class="swimlane__img">
+                        <img src="../images/Hundreds-of-Extensions.png" alt="Hundreds-of-Extensions">
+                    </div>
+                </a>
+
+                <div class="swimlane__content">
+                    <h2>Extensible and customizable.</h2>
+                    <p>Want even more features? Install extensions to add new languages, themes, debuggers, and to connect to additional services. Extensions run in separate processes, ensuring they won't slow down your editor. <a href="https://code.visualstudio.com/docs/editor/extension-marketplace">Learn more about extensions.</a></p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="swimlane deploy">
         <div class="container">
-            <div class="deploy__wrapper">
-                <img src="" alt="">
-                <h2>Deploy with confidence and ease</h2>
-                <p>With <a>Microsoft Azure</a> you can deploy and host your React, Angular, Vue, Node, Python (and more!) sites, store and query relational and document based data, and scale with serverless computing, all with ease, <a>all from within VS Code.</a></p>
+            <div class="swimlane__wrapper">
+                <div class="swimlane__img">
+                    <img src="../images/swimlane-azure.svg" alt="swimlane-azure">
+                </div>
+
+                <div class="swimlane__content">
+                    <h2>Deploy with confidence and ease</h2>
+                    <p>With <a href="https://azure.microsoft.com/">Microsoft Azure</a> you can deploy and host your React, Angular, Vue, Node, Python (and more!) sites, store and query relational and document based data, and scale with serverless computing, all with ease, <a href="https://code.visualstudio.com/docs/azure/extensions">all from within VS Code.</a></p>
+                </div>
             </div>
         </div>
     </section>
@@ -268,11 +297,11 @@
                     </div>
                 </div>
 
-                <a href="">
+                <a href="https://marketplace.visualstudio.com/search?target=VSCode&category=Programming%20Languages&sortBy=Installs">
                     <p>and many more languages on the Marketplace...</p>
                 </a>
 
-                <a href="">Get Started Now</a>
+                <button href="https://code.visualstudio.com/docs">Get Started Now</button>
             </div>
         </div>
     </section>
@@ -283,9 +312,11 @@
                 <div class="downloads__grid downloads__windows">
                     <img src="../images/windows-logo.png" alt="windows-logo">
 
-                    <button>
-                        <i class="download"></i>
-                        <span>Windows</span>
+                    <button href="https://code.visualstudio.com/docs/?dv=win">
+                        <div class="downloads__button__title">
+                            <i class="fa-solid fa-download"></i>
+                            Windows
+                        </div>
                         <span>Windows 8, 10, 11</span>
                     </button>
 
@@ -321,17 +352,21 @@
                 </div>
 
                 <div class="downloads__grid downloads__linux">
-                    <img src="../images/windows-logo.png" alt="windows-logo">
+                    <img src="../images/linux-logo.png" alt="windows-logo">
 
                     <button>
-                        <i class="download"></i>
-                        <span>.deb</span>
+                        <div class="downloads__button__title">
+                            <i class="fa-solid fa-download"></i>
+                            deb
+                        </div>
                         <span>Debian, Ubuntu</span>
                     </button>
 
                     <button>
-                        <i class="download"></i>
-                        <span>.rpm</span>
+                        <div class="downloads__button__title">
+                            <i class="fa-solid fa-download"></i>
+                            .rpm
+                        </div>
                         <span>Red Hat, Fedora, SUSE</span>
                     </button>
 
@@ -371,11 +406,13 @@
                 </div>
 
                 <div class="downloads__grid downloads__mac">
-                    <img src="../images/windows-logo.png" alt="windows-logo">
+                    <img src="../images/apple-logo.svg" alt="windows-logo">
 
                     <button>
-                        <i class="download"></i>
-                        <span>Mac</span>
+                        <div class="downloads__button__title">
+                            <i class="fa-solid fa-download"></i>
+                            Mac
+                        </div>
                         <span>macOS 10.11+</span>
                     </button>
 

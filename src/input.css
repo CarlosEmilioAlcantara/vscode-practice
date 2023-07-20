@@ -286,7 +286,7 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .banner__dropdown .banner__dropdown__text__container {
-        @apply w-0
+        @apply text-center w-44 my-0 mx-auto
     }
 
     .banner__dropdown .banner__dropdown__text {

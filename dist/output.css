@@ -1294,7 +1294,12 @@ h2 {
 }
 
 .banner__dropdown .banner__dropdown__text__container {
-  width: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 11rem;
+  text-align: center;
 }
 
 .banner__dropdown .banner__dropdown__text {
@@ -2238,6 +2243,10 @@ h2 {
   --tw-border-spacing-x: 4rem !important;
   --tw-border-spacing-y: 4rem !important;
   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y) !important;
+}
+
+.items-center {
+  align-items: center !important;
 }
 
 .gap-2 {

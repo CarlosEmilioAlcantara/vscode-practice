@@ -19,6 +19,30 @@ general rule of thumb is that what goes here can be overridden */
     }
 }
 
+.banner__links::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #25252b;
+    top: -8px;
+    right: 3px;
+}
+
+.github__count::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    border-right: 3px solid #fafafa;
+    top: 7px;
+    left: -3px;
+}
+
 /* sa components mga classes na nagbabago ng itsura */
 @layer components {
     .container {
@@ -78,7 +102,11 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .header__nav__left ul li {
-        @apply text-[1.6rem] md:text-gray
+        @apply text-[1.6rem] md:text-gray transition duration-200
+    }
+
+    .header__nav__left ul li:hover {
+        @apply md:text-light
     }
 
     .header__dropdown__dl {
@@ -106,11 +134,27 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .search__bar i {
-        @apply absolute ml-5 md:text-gray lg:text-light
+        @apply absolute ml-5 md:text-gray lg:text-light duration-200
+    }
+
+    .search__bar i:hover {
+        @apply md:text-light cursor-pointer
     }
 
     .search__bar input {
-        @apply sm:hidden lg:block bg-search-bar h-[5.0rem] pl-16 w-[18.3rem] text-[1.4rem] placeholder-light font-extralight
+        @apply sm:hidden lg:block bg-search-bar h-[5.0rem] pl-16 w-[18.3rem] text-[1.4rem] placeholder-light font-extralight 
+    }
+
+    .search__bar input:hover {
+        @apply lg:bg-search-bar-hover lg:border-light lg:border-[.005rem]
+    }
+
+    .search__bar input:hover:focus {
+        @apply lg:border-[.005rem] lg:outline-none
+    }
+
+    .search__bar input:focus {
+        @apply lg:bg-search-bar-hover lg:border-light lg:border-[.005rem] lg:outline-none
     }
 
     .search__text {
@@ -122,7 +166,7 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .dl__link:hover {
-        @apply bg-hover
+        @apply bg-hover cursor-pointer
     }
 
     .dl__text {
@@ -226,11 +270,43 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .banner__downloads__button__right {
-        @apply px-[1rem]
+        @apply relative px-[1rem]
+    }
+
+    .banner__dropdown {
+        @apply hidden absolute bg-light text-dark border-[.2rem] border-button z-[8888] top-[35rem] md:top-[41rem] lg:top-[39rem]
+    }
+
+    .banner__dropdown th {
+        @apply text-[1.36rem] font-light p-[.85rem] md:text-[1.52rem] lg:text-[1.6rem]
+    }
+
+    .banner__dropdown .operating__system {
+        @apply text-[1.275rem] font-bold md:text-[1.425rem] lg:text-[1.5rem]
+    }
+
+    .banner__dropdown .banner__dropdown__text__container {
+        @apply w-0
+    }
+
+    .banner__dropdown .banner__dropdown__text {
+        @apply font-light text-[1.4rem]
+    }
+
+    .banner__dropdown td {
+        @apply text-[1.6rem] p-[.85rem] border-b-[.1rem] border-gray
+    }
+
+    .banner__dropdown .non__accented {
+        @apply text-dark
+    }
+
+    .banner__dropdown.open {
+        @apply block 
     }
 
     .banner__links {
-        @apply  bg-darker text-[1.1rem] font-light px-[4.5rem] py-[.8rem] rounded-xl md:text-[1.3rem] md:px-[.9rem] lg:text-[1.4rem] lg:px-[.8rem]
+        @apply relative bg-darker text-[1.1rem] font-light px-[4.5rem] py-[.8rem] rounded-xl md:text-[1.3rem] md:px-[.9rem] lg:text-[1.4rem] lg:px-[.8rem]
     }
 
     .banner__terms {
@@ -398,7 +474,7 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .downloads__wrapper {
-        @apply flex flex-col items-center
+        @apply flex flex-col items-center  gap-6 lsm:grid lsm:grid-cols-2 lsm:items-start md:grid-cols-3
     }
 
     .downloads img {
@@ -409,8 +485,16 @@ general rule of thumb is that what goes here can be overridden */
         @apply flex flex-col items-center gap-7
     }
 
-    .downloads__grid button {
-        @apply flex flex-col items-center text-[1.5rem] font-semibold py-[1rem] px-[7.2rem] bg-button text-light
+    .downloads__button {
+        @apply flex flex-col items-center text-[1.5rem] font-semibold py-[1rem] px-[7.2rem] bg-button text-light gap-3 lmd:text-[1.62rem] md:text-[1.71rem] lg:text-[1.8rem]
+    }
+
+    .downloads__button__linux__deb {
+        @apply flex flex-col items-center text-[1.5rem] font-semibold py-[1rem] px-[3.2rem] bg-button text-light gap-3 lmd:text-[1.62rem] md:text-[1.71rem] lg:text-[1.8rem]
+    }
+
+    .downloads__button__linux__rpm {
+        @apply flex flex-col items-center text-[1.5rem] font-semibold py-[1rem] bg-button text-light w-[14.15rem] gap-3 lmd:text-[1.62rem] md:text-[1.71rem] lg:text-[1.8rem]
     }
 
     .downloads__grid button:hover {
@@ -422,11 +506,131 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .downloads__grid button span {
-        @apply text-[1rem]
+        @apply text-[1rem] lmd:text-[1.08rem] md:text-[1.14rem] lg:text-[1.2rem]
     }
 
-    .downloads__grid td span {
-        @apply text-[1.6rem] font-semibold text-center
+    .downloads__grid table tr {
+        @apply border-spacing-64
+    }
+
+    .downloads__grid table span {
+        @apply text-[1.5rem] font-semibold mr-3 lmd:text-[1.6rem]
+    }
+
+    .downloads__grid table a {
+        @apply text-[1.2rem] font-light bg-button text-light px-[.3rem] rounded
+    }
+
+    .dowloads__linux {
+        @apply lsm:justify-end
+    }
+
+    .downloads__mac {
+        @apply lsm:col-span-2 md:col-span-1
+    }
+
+    .cta__bottom {
+        @apply bg-less-gray py-[5rem]
+    }
+
+    .cta__bottom .container {
+        @apply max-w-[57rem] md:max-w-6xl
+    }
+
+    .cta__bottom__wrapper {
+        @apply flex flex-col items-center text-center gap-[10rem] md:grid md:grid-cols-2 md:items-start
+    }
+
+    .cta__bottom h2 {
+        @apply text-[1.785rem] font-semibold lmd:text-[1.89rem] md:text-[1.995rem] lg:text-[2.1rem]
+    }
+
+    .cta__bottom p {
+        @apply text-[1.5rem] lmd:text-[1.62rem] md:text-[1.71rem] lg:text-[1.8rem]
+    }
+
+    .cta__bottom a {
+        @apply text-accent-one
+    }
+
+    .cta__bottom a:hover {
+        @apply text-hover underline
+    }
+
+    .cta__bottom__text {
+        @apply flex flex-col gap-4
+    }
+
+    .cta__bottom__terms {
+        @apply sm:px-[10rem] md:col-span-2
+    }
+
+    .cta__bottom__terms h3 {
+        @apply text-[1.275rem] font-semibold lmd:text-[1.35rem] md:text-[1.425rem] lg:text-[1.5rem]
+    }
+
+    .cta__bottom__terms p {
+        @apply text-[1.19rem] leading-[4rem] lmd:text-[1.26rem] md:text-[1.333rem] lg:text-[1.4rem]
+    }
+
+    .footer {
+        @apply bg-dark text-light pt-14 pb-6
+    }
+
+    .footer__wrapper {
+        @apply md:flex md:justify-between
+    }
+
+    .footer__left__col {
+        @apply text-[1.4rem] px-6 mb-[2.6rem]
+    }
+
+    .footer__left__col ul {
+        @apply flex ml-[2.6rem] items-center lsm:gap-11 lsm:ml-0 
+    }
+
+    .footer__left__col span {
+        @apply hidden lsm:block
+    }
+
+    .footer__left__col a:hover {
+        @apply text-hover-one
+    }
+
+    .footer__right__col {
+        @apply text-[1.2rem] px-6 md:max-w-xl lg:max-w-full
+    }
+
+    .footer__right__col ul {
+        @apply flex flex-wrap gap-x-12 md:justify-end md:gap-y-5
+    }
+
+    .footer__right__col a:hover {
+        @apply text-hover-one
+    }
+
+    .footer__right__col img {
+        @apply w-[9.355rem]
+    }
+
+    .github__button {
+        @apply flex bg-light-one py-[.2rem] pl-[.5rem] pr-[.4rem] text-dark text-[1.1rem] gap-1 rounded
+    }
+
+    .github__button:hover {
+        @apply bg-less-light
+    }
+
+    .github__button img {
+        @apply w-[1.4rem] h-[1.4rem]
+    }
+
+    .github__count {
+        @apply relative bg-light-one py-[.2rem] pl-[.5rem] pr-[.4rem] text-dark text-[1.1rem] gap-2 rounded
+    }
+
+    .github__count:hover {
+        @apply text-count-hover bg-less-light cursor-pointer
     }
 }
 

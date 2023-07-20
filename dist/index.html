@@ -92,6 +92,50 @@
                         <button class="banner__downloads__button__left">Download for Windows <span>Stable Build</span></button>
     
                         <button class="banner__downloads__button__right"><i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="banner__dropdown">
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th>Stable</th>
+                                    <th class="bg-less-gray">Insiders</th>
+                                </tr>
+
+                                <tr>
+                                    <td class="operating__system">macOS</td>
+                                    <td>Universal</td>
+                                    <td><a href=""><i class="fa-solid fa-download"></i></a></td>
+                                    <td class="bg-less-gray"><a href=""><i class="fa-solid fa-download non__accented"></i></a></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="operating__system">Windows x64</td>
+                                    <td>User Installer</td>
+                                    <td><a href=""><i class="fa-solid fa-download"></i></a></td>
+                                    <td class="bg-less-gray"><a href=""><i class="fa-solid fa-download non__accented"></i></a></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="operating__system">Linux x64</td>
+                                    <td>.deb</td>
+                                    <td><a href=""><i class="fa-solid fa-download"></i></a></td>
+                                    <td class="bg-less-gray"><a href=""><i class="fa-solid fa-download non__accented"></i></a></td>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td>.rpm</td>
+                                    <td><a href=""><i class="fa-solid fa-download"></i></a></td>
+                                    <td class="bg-less-gray"><a href=""><i class="fa-solid fa-download non__accented"></i></a></td>
+                                </tr>
+
+                                <tr>
+                                    <div class="banner__dropdown__text__container">
+                                        <td class="banner__dropdown__text" colspan="4"><a href="https://code.visualstudio.com/#alt-downloads">Other downloads</a> or <a href="https://vscode.dev/">open on web</a></td>
+                                    </div>
+                                </tr>
+                            </table>
+                        </div>
                     </div> 
     
                     <p class="banner__links">
@@ -312,7 +356,7 @@
                 <div class="downloads__grid downloads__windows">
                     <img src="../images/windows-logo.png" alt="windows-logo">
 
-                    <button href="https://code.visualstudio.com/docs/?dv=win">
+                    <button href="https://code.visualstudio.com/docs/?dv=win" class="downloads__button">
                         <div class="downloads__button__title">
                             <i class="fa-solid fa-download"></i>
                             Windows
@@ -322,28 +366,32 @@
 
                     <table class="downloads__windows__structures">
                         <tr>
-                            <td><span>User Installer</span></td>
+                            <td class="text-center"><span>User Installer</span></td>
                             <td><a href="">x64</a></td>
                             <td><a href="">x86</a></td>
                             <td><a href="">Arm64</a></td>
                         </tr>
 
                         <tr>
-                            <td><span>System Installer</span></td>
+                            <td class="text-center"><span>System Installer</span></td>
                             <td><a href="">x64</a></td>
                             <td><a href="">x86</a></td>
                             <td><a href="">Arm64</a></td>
                         </tr>
 
                         <tr>
-                            <td><span>.zip</span></td>
+                            <td class="text-center"><span>.zip</span></td>
                             <td><a href="">x64</a></td>
                             <td><a href="">x86</a></td>
                             <td><a href="">Arm64</a></td>
                         </tr>
 
                         <tr>
-                            <td><span>CLI</span></td>
+                            <td><span></span></td>
+                        </tr>
+
+                        <tr class="border-spacing-16">
+                            <td class="text-center mt-6"><span>CLI</span></td>
                             <td><a href="">x64</a></td>
                             <td><a href="">x86</a></td>
                             <td><a href="">Arm64</a></td>
@@ -354,50 +402,57 @@
                 <div class="downloads__grid downloads__linux">
                     <img src="../images/linux-logo.png" alt="windows-logo">
 
-                    <button>
-                        <div class="downloads__button__title">
-                            <i class="fa-solid fa-download"></i>
-                            deb
-                        </div>
-                        <span>Debian, Ubuntu</span>
-                    </button>
+                    <div class="flex gap-3">
+                        <button class="downloads__button__linux__deb">
+                            <div class="downloads__button__title">
+                                <i class="fa-solid fa-download"></i>
+                                deb
+                            </div>
+                            <span>Debian, Ubuntu</span>
+                        </button>
 
-                    <button>
-                        <div class="downloads__button__title">
-                            <i class="fa-solid fa-download"></i>
-                            .rpm
-                        </div>
-                        <span>Red Hat, Fedora, SUSE</span>
-                    </button>
+                        <button class="downloads__button__linux__rpm">
+                            <div class="downloads__button__title">
+                                <i class="fa-solid fa-download"></i>
+                                .rpm
+                            </div>
+                            <span>Red Hat, Fedora, SUSE</span>
+                        </button>
+                    </div>
 
                     <table class="downloads__linux__structures">
                         <tr>
-                            <td><span>.deb</span></td>
+                            <td class="text-center"><span>.deb</span></td>
                             <td><a href="">x64</a></td>
                             <td><a href="">Arm32</a></td>
                             <td><a href="">Arm64</a></td>
                         </tr>
 
                         <tr>
-                            <td><span>.rpm</span></td>
+                            <td class="text-center"><span>.rpm</span></td>
                             <td><a href="">x64</a></td>
                             <td><a href="">Arm32</a></td>
                             <td><a href="">Arm64</a></td>
                         </tr>
 
                         <tr>
-                            <td><span>.tar.gz</span></td>
+                            <td class="text-center"><span>.tar.gz</span></td>
                             <td><a href="">x64</a></td>
                             <td><a href="">Arm32</a></td>
                             <td><a href="">Arm64</a></td>
                         </tr>
 
                         <tr>
-                            <td><a href="">Snap Store</a></td>
+                            <td class="text-center"><span>Snap</span></td>
+                            <td class="" colspan="2"><a href="">Snap Store</a></td>
                         </tr>
 
                         <tr>
-                            <td><span>CLI</span></td>
+                            <td><span></span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-center"><span>CLI</span></td>
                             <td><a href="">x64</a></td>
                             <td><a href="">Arm32</a></td>
                             <td><a href="">Arm64</a></td>
@@ -408,7 +463,7 @@
                 <div class="downloads__grid downloads__mac">
                     <img src="../images/apple-logo.svg" alt="windows-logo">
 
-                    <button>
+                    <button class="downloads__button">
                         <div class="downloads__button__title">
                             <i class="fa-solid fa-download"></i>
                             Mac
@@ -418,14 +473,18 @@
 
                     <table class="downloads__mac__structures">
                         <tr>
-                            <td><span>.zip</span></td>
+                            <td class="text-center"><span>.zip</span></td>
                             <td><a href="">Intel chip</a></td>
                             <td><a href="">Apple silicon</a></td>
                             <td><a href="">Universal</a></td>
                         </tr>
 
                         <tr>
-                            <td><span>CLI</span></td>
+                            <td><span></span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-center"><span>CLI</span></td>
                             <td><a href="">Intel chip</a></td>
                             <td><a href="">Apple silicon</a></td>
                         </tr>
@@ -459,23 +518,32 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__wrapper">
-                <div class="footer__left-col">
+                <div class="footer__left__col">
                     <ul>
                         <li><span>Hello from Seattle.</span></li>
-                        <li><a href="">Follow @code</a></li>
-                        <!-- <li><div class="github-star-button">
-                            <iframe src="/assets/github-button.html?user=Microsoft&amp;repo=vscode&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="130px" height="20px" title="GitHub follow button" loading="lazy"></iframe>
-                        </div></li> -->
+                        <li><a href="https://go.microsoft.com/fwlink/?LinkID=533687">Follow @code</a></li>
+                        <li class="flex gap-2">
+                            <a href="https://github.com/Microsoft/vscode/">
+                                <div class="github__button">
+                                    <img src="../images/github.svg">
+                                    Star
+                                </div>
+                            </a>
+
+                            <div class="github__count">
+                                148,441
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
-                <div class="footer__right-col">
+                <div class="footer__right__col">
                     <ul>
-                        <li><a href="">Support</a></li>
-                        <li><a href="">Privacy</a></li>
-                        <li><a href="">Terms of Use</a></li>
-                        <li><a href="">License</a></li>
-                        <li><a href=""><img src="../images/microsoft-logo.png" alt="microsoft-logo"></a>© 2023 Microsoft</li>
+                        <li><a href="https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=d66407ed-3967-b000-4cfb-2c318cad363d">Support</a></li>
+                        <li><a href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy</a></li>
+                        <li><a href="https://www.microsoft.com/legal/terms-of-use" class="whitespace-nowrap">Terms of Use</a></li>
+                        <li><a href="https://code.visualstudio.com/License">License</a></li>
+                        <li><a href="https://www.microsoft.com/"><img src="../images/microsoft-logo.png" alt="microsoft-logo"></a>© 2023 Microsoft</li>
                     </ul>
                 </div>
 

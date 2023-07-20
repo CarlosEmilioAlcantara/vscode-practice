@@ -21,6 +21,8 @@ module.exports = {
     },
     colors: {
       'light': '#fff',
+      'light-one': '#fafafa',
+      'less-light': '#ddd',
       'dark': '#2c2c32',
       'darker': '#25252b',
       'less-gray': '#f5f5f5',
@@ -33,7 +35,9 @@ module.exports = {
       'button': '#0066b8',
       'button-hover': '#005ba4',
       'burger-hover': '#0072be',
+      'count-hover': '#3374A9',
       'search-bar': 'rgba(255,255,255,.08)',
+      'search-bar-hover': 'rgba(255,255,255,.18)',
       'lightbulb': '#2e3192',
       'bug': '#37b34a',
       'git': '#f42534',

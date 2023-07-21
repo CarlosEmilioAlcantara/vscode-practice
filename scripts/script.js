@@ -17,6 +17,11 @@ banButtRight.addEventListener('click', () => {
     banDrop.classList.toggle('open');
 })
 
+banButtRight.addEventListener('blur', () => {
+    banButtRight.classList.remove('open');
+    banDrop.classList.remove('open');
+})
+
 // kaya di na tayo naggawa ng const na window dahil meron na tayo ng 'window' na proxy ng browser
 window.addEventListener("scroll", () => { // makinig sa kada scroll ng browser
     console.log(window.scrollY); // isulat sa console gamit ang function log ang kada scroll
@@ -26,3 +31,28 @@ window.addEventListener("scroll", () => { // makinig sa kada scroll ng browser
         header.classList.remove("active");
     }
 });
+
+const searchInput = document.querySelector(".search__input")
+const searchIcon = document.querySelector(".search__icon")
+
+searchInput.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        searchIcon.click();
+    }
+});
+
+// function search() {
+//     window.open("https://www.geeksforgeeks.org");
+// }
+        
+// var slider = tns({
+//     container: ".slider__wrapper",
+//     items: 1,
+//     slideBy: 1,
+//     autoplay: false,
+//     controlsText: [
+//         '<i class="fa-solid fa-chevron-left text-[20px] text-gray hover:text-dark"></i>',
+//         '<i class="fa-solid fa-chevron-right text-[20px] text-gray hover:text-dark"></i>',
+//     ],
+//     nav: false,
+// });

@@ -27,6 +27,7 @@ module.exports = {
       'darker': '#25252b',
       'less-gray': '#f5f5f5',
       'gray': '#cccccc',
+      'slider-gray': '#6e6e6e',
       'accent': '#0098ff',
       'accent-one': '#0071bc',
       'accent-two': '#337ab7',
@@ -41,6 +42,7 @@ module.exports = {
       'lightbulb': '#2e3192',
       'bug': '#37b34a',
       'git': '#f42534',
+      'transparent': 'rgba(255,255,255,0)',
     },
     fontFamily: {
       'body': ['"Noto Sans", sans-serif'],
@@ -48,6 +50,7 @@ module.exports = {
     extend: {
       boxShadow: {
         '3xl': '0 3px 3px 0px rgba(0, 0, 0, 0.3)',
+        'circle-shadow': '2px 2px 2px 0 rgba(0,0,0,.2)',
       }
     },
   },

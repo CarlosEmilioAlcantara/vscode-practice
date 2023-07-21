@@ -43,6 +43,28 @@ general rule of thumb is that what goes here can be overridden */
     left: -3px;
 }
 
+/* .search__bar input.search__icon:hover {
+    .search__bar .search__icon i {
+        color: #fff;
+    }
+} */
+
+.tns-outer {
+    @apply relative w-[100%]
+}
+
+.tns-controls {
+    @apply absolute bottom-[50%] z-[7777] w-[100%]
+}
+
+.previous {
+    @apply absolute left-[6.5rem]
+}
+
+.next {
+    @apply absolute right-[5.9rem]
+}
+
 /* sa components mga classes na nagbabago ng itsura */
 @layer components {
     .container {
@@ -50,7 +72,7 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .header {
-        @apply block bg-dark text-light w-[100%] /* py-[.61rem] */ z-[9999] top-0 left-0 fixed h-[5rem] md:h-auto
+        @apply block bg-dark text-light w-[100%] /* py-[.61rem] */ z-[9999] top-0 left-0 fixed ease-in-out duration-[.30s] h-[5rem] md:h-auto
     }
 
     .header.open {
@@ -141,20 +163,24 @@ general rule of thumb is that what goes here can be overridden */
         @apply md:text-light cursor-pointer
     }
 
-    .search__bar input {
+    .search__bar input.search__input {
         @apply sm:hidden lg:block bg-search-bar h-[5.0rem] pl-16 w-[18.3rem] text-[1.4rem] placeholder-light font-extralight 
     }
 
-    .search__bar input:hover {
+    .search__bar input.search__input:hover {
         @apply lg:bg-search-bar-hover lg:border-light lg:border-[.005rem]
     }
 
-    .search__bar input:hover:focus {
+    .search__bar input.search__input:hover:focus {
         @apply lg:border-[.005rem] lg:outline-none
     }
 
-    .search__bar input:focus {
+    .search__bar input.search__input:focus {
         @apply lg:bg-search-bar-hover lg:border-light lg:border-[.005rem] lg:outline-none
+    }
+
+    .search__bar input.search__icon {
+        @apply hidden md:block absolute w-10 cursor-pointer outline-none bg-transparent caret-transparent md:right-[15rem] lg:right-[28.5rem]
     }
 
     .search__text {
@@ -193,8 +219,12 @@ general rule of thumb is that what goes here can be overridden */
         @apply text-[1.5rem]
     }
 
-    .cta__top p span {
+    .cta__top a {
         @apply underline text-accent
+    }
+    
+    .cta__top a:hover {
+        @apply no-underline
     }
 
     .cta__top .container {
@@ -357,6 +387,84 @@ general rule of thumb is that what goes here can be overridden */
         @apply relative
     } */
 
+    .slider {
+        @apply bg-less-gray flex items-center
+    }
+
+    .slider .container {
+        @apply relative
+    }
+
+    .slider__wrapper {
+        @apply flex items-center w-[100%] justify-between
+    }
+
+    .slider__item {
+        @apply relative flex gap-4 mb-11
+    }
+
+    .slider__img {
+        @apply w-[6.119rem] h-[6.119rem] md:mr-3 /*absolute left-[-2rem] top-[-1rem]*/
+    }
+
+    .slider__img img {
+        @apply w-[6.119rem] h-[6.119rem] lmd:w-[6.48rem] lmd:h-[6.48rem] md:w-[6.839rem] md:h-[6.839rem] lg:w-[7.2rem] lg:h-[7.2rem] rounded-full shadow-circle-shadow max-w-none
+    }
+
+    .slider__content {
+        @apply relative
+    }
+
+    .slider__header a {
+        @apply lg:flex lg:gap-3
+    }
+
+    .slider__header h2 {
+        @apply text-[1.2rem] font-bold tracking-tight m-0 lmd:text-[1.26rem] md:text-[1.33rem] lg:text-[1.4rem]
+    }
+
+    .slider__header span {
+        @apply text-[1.02rem] text-slider-gray lmd:text-[1.08rem] md:text-[1.14rem] lg:text-[1.2rem]
+    }
+
+    .slider__text p {
+        @apply text-[1.53rem] font-light text-left lmd:text-[1.62rem] md:text-[1.71rem] lg:text-[1.8rem]
+    }
+
+    .slider__icon {
+        @apply absolute w-[1.359rem] top-0 right-0 lmd:w-[1.439rem] md:w-[1.519rem] lg:w-[1.6rem] lg:h-[1.8rem]
+    }
+
+    .slider__icon img {
+        @apply w-[100%]
+    }
+
+    .slider__slide {
+        @apply max-w-full p-32 md:!grid md:!grid-cols-3 md:gap-12
+    }
+
+
+    /* .tns-inner {
+        @apply items-center
+    } */
+
+
+
+    /* .previous {
+        @apply absolute bottom-0
+    } */
+    /* .tns-controls {
+        @apply flex items-center justify-between absolute bottom-0
+    } */
+
+    /* .tns-button {
+        @apply text-[2rem] absolute bottom-0
+    } */
+
+    .tns-nav {
+        @apply hidden;
+    }
+
     .debug {
         @apply relative
     }
@@ -374,11 +482,11 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .swimlane__wrapper {
-        @apply flex flex-col items-center md:flex-row md:justify-between md:align-middle
+        @apply flex flex-col items-center lmd:flex-row lmd:justify-between lmd:align-top md:flex-row md:justify-between md:align-top
     }
 
     .swimlane__img {
-        @apply w-[43.2rem] md:w-[30rem] lg:w-[36rem]
+        @apply w-[43.2rem] lmd:w-[30rem] md:w-[30rem] lg:w-[36rem]
     }
 
     .swimlane__img img {
@@ -422,7 +530,7 @@ general rule of thumb is that what goes here can be overridden */
     }
 
     .extensions img {
-        @apply transform transition duration-500
+        @apply transform transition duration-1000 w-[43.2rem] lmd:w-[30rem] md:w-[30rem] lg:w-[36rem]
     }
 
     .extensions img:hover {
@@ -519,6 +627,10 @@ general rule of thumb is that what goes here can be overridden */
 
     .downloads__grid table a {
         @apply text-[1.2rem] font-light bg-button text-light px-[.3rem] rounded
+    }
+
+    .downloads__grid table a:hover {
+        @apply bg-hover
     }
 
     .dowloads__linux {
